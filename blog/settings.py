@@ -25,7 +25,7 @@ SECRET_KEY = '20fw$)tgxqdjwr#1hw)*wfi=d$i=zh=z)**@+eb9-39*s$s9^y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dobler.pythonanywhere.com']
 
 
 # Application definition
@@ -121,3 +121,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
