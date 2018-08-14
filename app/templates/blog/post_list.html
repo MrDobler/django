@@ -1,33 +1,16 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog do Dobler</title>
-</head>
-<body>
-    <div class="header">
-        <div style="width: 500px;margin: 0 auto;text-align: center;">
-            <h1 style="color: darkblue">Blog do Dobler</h1>
-        </div>
-    </div>
 
-    <div class="content" >
-        <div style="width: 700px; margin: 0 auto;">
-           {% for post in posts %}
-                {% if post.published_date == None %}
-                    <p style="margin-bottom: 0; color: darkblue;">publicado em: Não preenchido</p>
-                {% else %}
-                    <p style="margin-bottom: 0; color: darkblue;">publicado em: {{ post.published_date }}</p>
-                {% endif %}
-                <h1 style="background-color: grey; margin: 0;">{{ post.title }}</h1>
-                <p style="background-color: lightgrey; margin:0;">{{ post.text|linebreaksbr }}</p>
-           {% endfor %}
-       </div>
-    </div>
+{% extends "blog/base.html" %}
 
-    <div class="footer"></div>
-</body>
-</html>
+{% block content %}
+
+    {% for post in posts %}
+        {% if post.published_date == None %}
+            <p class="published">publicado em: Não preenchido</p>
+        {% else %}
+            <p class="published">publicado em: {{ post.published_date }}</p>
+        {% endif %}
+        <h2 class="blog-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+        <p class="blog-text">{{ post.text|linebreaksbr }}</p>
+    {% endfor %}
+
+{% endblock  %}
