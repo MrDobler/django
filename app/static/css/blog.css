@@ -5,13 +5,13 @@
 }
 
 @font-face {
-    font-family: Bangers;
-    src: url('../fonts/Bangers.ttf')
+    font-family: DoHyeon;
+    src: url('../fonts/DoHyeon.ttf')
 }
 
 h1 {
     color: darkblue;
-    font-family: Bangers;
+    font-family: DoHyeon;
 }
 
 .content {
@@ -19,19 +19,20 @@ h1 {
     margin: 0 auto;
     padding: 20px;
     border: black solid 2px;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
 }
 
 .published {
     margin-bottom: 0;
     color: darkblue;
-    font-family: Bangers;
+    font-family: DoHyeon;
 }
 
 .blog-title {
     background-color: grey;
     margin: 0;
     padding: 10px 10px;
-    font-family: Bangers;
+    font-family: DoHyeon;
     color: navy;
     -webkit-text-stroke-width: 1px; 
     -webkit-text-stroke-color: white;
@@ -45,11 +46,26 @@ a:link, a:active, a:visited {
     background-color: lightgrey;
     margin: 0;
     padding: 5px 5px;
-    font-family: Bangers;
+    font-family: DoHyeon;
 }
 
 @media screen and (max-width: 990px){
     .header, .content {
         width: 300px;
     }
+}
+
+.menu {
+    border: 2px black solid;
+    background-color: grey;
+    margin-bottom: 5%;
+    padding: 1%;
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.75);
+}
+
+button {
+    border: 1px black solid;
+    height: 30px;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
 }
