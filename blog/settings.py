@@ -25,7 +25,7 @@ SECRET_KEY = '20fw$)tgxqdjwr#1hw)*wfi=d$i=zh=z)**@+eb9-39*s$s9^y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dobler.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['http://dobler.pythonanywhere.com/', '127.0.0.1']
 
 
 # Application definition
