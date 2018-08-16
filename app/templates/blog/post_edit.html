@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+    <h1 style="text-align: center">Novo Post</h1>
+    <form style="text-align: center" method="POST" class="create-form">
+        {% csrf_token %}        
+        <p>
+            <label style="font-family: DoHyeon; display: block;" for="title">Título:</label>
+            {{ form.title }}
+        </p>
+        <p>
+            <label style="font-family: DoHyeon; display: block;" for="text">Texto:</label>
+            {{ form.text }}
+        </p>
+        <button type="submit">Salvar</button>
+    </form>
+{% endblock  %}

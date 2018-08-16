@@ -5,13 +5,13 @@
 }
 
 @font-face {
-    font-family: DoHyeon;
-    src: url('../fonts/DoHyeon.ttf')
+    font-family: AlfaSlabOne;
+    src: url('../fonts/AlfaSlabOne.ttf')
 }
 
 h1 {
     color: darkblue;
-    font-family: DoHyeon;
+    font-family: AlfaSlabOne;
 }
 
 .content {
@@ -25,33 +25,37 @@ h1 {
 .published {
     margin-bottom: 0;
     color: darkblue;
-    font-family: DoHyeon;
+    font-family: AlfaSlabOne;
 }
 
 .blog-title {
     background-color: grey;
     margin: 0;
     padding: 10px 10px;
-    font-family: DoHyeon;
+    font-family: AlfaSlabOne;
     color: navy;
     -webkit-text-stroke-width: 1px; 
     -webkit-text-stroke-color: white;
 }
 
-a:link, a:active, a:visited {
-    text-decoration: none;
+a, a:link, a:visited, a:focus, a:hover, a:active {
+    text-decoration:none; 
 }
 
 .blog-text {
     background-color: lightgrey;
     margin: 0;
     padding: 5px 5px;
-    font-family: DoHyeon;
+    font-family: AlfaSlabOne;
 }
 
 @media screen and (max-width: 990px){
     .header, .content {
         width: 300px;
+    }
+
+    textarea {
+        max-width: 200px;
     }
 }
 
@@ -68,4 +72,27 @@ button {
     height: 30px;
     cursor: pointer;
     box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+    font-family: AlfaSlabOne;
 }
+
+.date {
+    font-family: AlfaSlabOne;
+}
+
+.create-form {
+    font-family: AlfaSlabOne;
+}
+
+#id_text {
+    border: 2px solid black !important;
+    resize: none;
+}
+
+#id_title {
+    border: 2px solid black !important;
+}
+
+label {
+    font-family: AlfaSlabOne !important;
+}
+
